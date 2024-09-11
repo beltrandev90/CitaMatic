@@ -1,0 +1,7 @@
+{
+  "name": "CitaMatic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

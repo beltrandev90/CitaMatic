@@ -1,0 +1,78 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.form-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #A5D6A7;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    /* Puedes ajustar este valor según tus necesidades */
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(243, 243, 243, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15pt;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.errormessage {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+}
+
+ion-icon {
+    cursor: pointer;
+}
+
+.custom-button {
+    --background: #A5D6A7;
+    /* Color verde pastel */
+    /* Transición suave para los cambios de estilo */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-button:hover {
+    /* Oscurecer el color ligeramente en lugar de aclararlo */
+    box-shadow: 0 4px 8px rgba(165, 214, 167, 0.5);
+    /* Añade una sombra para el efecto de "iluminado" */
+}
+
+.checkbox-item {
+    margin-top: 20px; /* Incrementa el margen superior */
+    --padding-start: 0; /* Reduce el padding a la izquierda */
+}
+
+ion-checkbox {
+    margin-top: 10px; /* Ajusta el margen superior */
+    margin-left: 5px; /* Mueve el checkbox un poco más a la izquierda */
+    --color-checked: #A5D6A7; /* Personaliza el color del checkbox cuando está marcado */
+}

@@ -1,0 +1,31 @@
+// Colores Primarios
+$color-primary: #4CAF50; // Verde Principal
+$color-primary-light: #66BB6A; // Verde Claro
+$color-primary-dark: #388E3C; // Verde Oscuro
+
+// Colores Secundarios
+$color-secondary: #A5D6A7; // Verde Pastel
+
+// Colores de Fondo y Texto
+$color-background: #FAFAFA; // Fondo Blanco Suave
+$color-text-primary: #2C6B50; // Texto Principal
+$color-text-secondary: #4A8F4B; // Texto Secundario
+
+// Utilidades
+$color-border: #C5E1A5; // Color de borde o líneas
+$color-alert: #FF5722; // Color de alertas o errores
+$color-success: #4CAF50; // Color de éxito
+
+// Aplicación de colores en Ionic
+:root {
+  --ion-color-primary: #{$color-primary};
+  --ion-color-primary-light: #{$color-primary-light};
+  --ion-color-primary-dark: #{$color-primary-dark};
+  --ion-color-secondary: #{$color-secondary};
+  --ion-background-color: #{$color-background};
+  --ion-text-color: #{$color-text-primary};
+  --ion-text-color-secondary: #{$color-text-secondary};
+  --ion-border-color: #{$color-border};
+  --ion-alert-color: #{$color-alert};
+  --ion-success-color: #{$color-success};
+}

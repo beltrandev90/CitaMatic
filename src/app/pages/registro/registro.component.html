@@ -1,0 +1,51 @@
+<ion-content class="ion-padding">
+  <div class="form-container">
+
+    <img src="../../../assets/img/3.png">
+    <form [formGroup]="ionicForm" (ngSubmit)="enviarDatos()">
+      <div class="form-header">
+        <h2>Formulario</h2>
+      </div>
+
+      <!-- Nombre -->
+      <ion-item lines="full">
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" formControlName="nombre"></ion-input>
+      </ion-item>
+      <ion-label *ngIf="submitted && f['nombre'].hasError('required')" class="errormessage">Nombre requerido</ion-label>
+
+      <!-- Email -->
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-label *ngIf="submitted && f['email'].hasError('required')" class="errormessage">Email requerido</ion-label>
+      <ion-label *ngIf="submitted && f['email'].hasError('pattern')" class="errormessage">Email no válido</ion-label>
+
+      <!-- Password -->
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-label *ngIf="submitted && f['password'].hasError('required')" class="errormessage">Password requerido</ion-label>
+      <ion-label *ngIf="submitted && f['password'].hasError('minlength')" class="errormessage">
+        Longitud mínima de 6 caracteres
+      </ion-label>
+
+      <!-- Confirmación Password -->
+      <ion-item lines="full">
+        <ion-label position="floating">Confirmación Password</ion-label>
+        <ion-input type="password" formControlName="confirmPassword"></ion-input>
+      </ion-item>
+      <ion-label *ngIf="submitted && f['confirmPassword'].hasError('required')" class="errormessage">Confirmar Password</ion-label>
+      <ion-label *ngIf="submitted && f['confirmPassword'].hasError('mustMatch')" class="errormessage">Los passwords no coinciden</ion-label>
+
+      <!-- Botón de registro -->
+      <ion-row>
+        <ion-col>
+          <ion-button class="custom-button" type="submit">Registro</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

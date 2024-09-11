@@ -1,0 +1,43 @@
+<ion-content class="ion-padding">
+  <div class="form-container">
+
+    <img src="../../../assets/img/3.png">
+    <form [formGroup]="loginForm" (ngSubmit)="enviarDatos()">
+      <div class="form-header">
+        <h2>Login</h2>
+      </div>
+
+      <!-- Email -->
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-label *ngIf="submitted && f['email'].hasError('required')" class="errormessage">Email requerido</ion-label>
+      <ion-label *ngIf="submitted && f['email'].hasError('pattern')" class="errormessage">Email no válido</ion-label>
+
+      <!-- Password -->
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-label *ngIf="submitted && f['password'].hasError('required')" class="errormessage">Password requerido</ion-label>
+      <ion-label *ngIf="submitted && f['password'].hasError('minlength')" class="errormessage">
+        Longitud mínima de 6 caracteres
+      </ion-label>
+
+      <ion-item lines="none" class="checkbox-item">
+        <ion-label position="stacked">Recordar usuario y contraseña</ion-label>
+        <ion-checkbox type="checkbox" formControlName="recordarDatos"></ion-checkbox>
+      </ion-item>      
+
+      <!-- Botón inicio sesion -->
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" expand="block" [disabled]="!loginForm.valid">
+            Iniciar Sesión
+          </ion-button>          
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>
